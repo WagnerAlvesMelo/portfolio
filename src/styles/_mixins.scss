@@ -1,0 +1,11 @@
+@mixin font-corpo {
+    font-size: 1.1875em;
+    font-weight: 300;
+    color: white;
+}
+
+@mixin menu-title {
+    font-size: 2.25em;
+    font-weight: 600;
+    color: $color1;
+}

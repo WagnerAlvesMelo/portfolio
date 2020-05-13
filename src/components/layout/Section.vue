@@ -18,7 +18,7 @@ export default {
 <style>
 section {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: block;
   padding: 0 140px !important;
 }

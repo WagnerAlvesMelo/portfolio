@@ -31,6 +31,11 @@ export default {
   z-index: 1;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .title {
   @include menu-title;
 }

@@ -5,8 +5,8 @@ module.exports = {
         prependData: `
           @import "./src/styles/_vars.scss";
           @import "./src/styles/_mixins.scss";
-        `,
-      },
-    },
-  },
+        `
+      }
+    }
+  }
 };

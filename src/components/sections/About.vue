@@ -1,11 +1,38 @@
 <template>
-  <Section classe="about"></Section>
+  <Section classe="about">
+    <h3 class="title about__title">Sobre mim</h3>
+    <p class="about__resume">
+      Atuo como desenvolvedor de software e designer de interfaces.
+      Tenho experiência no desenvolvimento de
+      <br />sistemas e sites pessoais
+      para web baseados em
+      <br />conceitos de UX e utilizando as mais atuais
+      <br />tecnologias do mercado.
+    </p>
+    <Timeline />
+  </Section>
 </template>
 
 <script>
+import Timeline from "../timeline/Timeline";
 import Section from "../layout/Section.vue";
-export default {};
+export default {
+  components: { Timeline }
+};
 </script>
 
-<style>
+<style lang="scss">
+.about {
+  &__title {
+    margin-top: 32px;
+  }
+
+  &__resume {
+    @include font-corpo(1.5em);
+    width: 635px;
+    text-align: center;
+    margin: 128px auto 0 auto;
+    line-height: 36px;
+  }
+}
 </style>

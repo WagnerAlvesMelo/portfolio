@@ -1,5 +1,5 @@
-@mixin font-corpo {
-    font-size: 1.1875em;
+@mixin font-corpo($size:1.1875em) {
+    font-size: $size;
     font-weight: 300;
     color: white;
 }
@@ -8,4 +8,9 @@
     font-size: 2.25em;
     font-weight: 600;
     color: $color1;
+    text-align: center;
+}
+
+@mixin center($top:128px){
+    margin: $top auto 0 auto;
 }

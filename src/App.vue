@@ -2,20 +2,18 @@
   <div id="app">
     <Header />
     <Intro />
+    <About />
   </div>
 </template>
 
 <script>
-// eslint-disable-next-line quotes
 import Intro from "./components/sections/Intro.vue";
-// eslint-disable-next-line quotes
 import Header from "./components/Header.vue";
+import About from "./components/sections/About.vue";
 
 export default {
-  // eslint-disable-next-line quotes
   name: "App",
-  // eslint-disable-next-line comma-dangle
-  components: { Intro, Header }
+  components: { Intro, Header, About }
 };
 </script>
 
@@ -31,6 +29,10 @@ export default {
   color: #ffffff;
   background-color: #11001a;
   z-index: 1;
+}
+
+.title {
+  @include menu-title;
 }
 
 html,

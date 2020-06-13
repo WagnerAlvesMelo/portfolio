@@ -9,22 +9,19 @@
         </div>
         <h5 class="whatido__items__box__title">Construção de websites responsivos</h5>
         <p class="whatido__items__box__text"> Lorem Ipsum is simply dummy text of the all printing
-          and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s</p>
+          and typesetting industry. Lorem Ipsum has been the industry's</p>
       </Box>
       <Box class="whatido__items__box">
         <DesignIcon/>
         <h5 class="whatido__items__box__title">Desenvolvimento back-end</h5>
         <p class="whatido__items__box__text"> Lorem Ipsum is simply dummy text of the all printing
-          and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s</p>
+          and typesetting industry. Lorem Ipsum has been the industry's</p>
       </Box>
       <Box class="whatido__items__box" >
         <DesignIcon/>
         <h5 class="whatido__items__box__title">Construção de interfaces</h5>
         <p class="whatido__items__box__text"> Lorem Ipsum is simply dummy text of the all printing
-          and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s</p>
+          and typesetting industry. Lorem Ipsum has been the industry's</p>
       </Box>
     </div>
   </Section>
@@ -51,16 +48,23 @@ export default {
       display: flex;
       justify-content: center;
       padding-top: 120px;
-      padding-left: 32px;
-      padding-right: 32px;
+      width: 100%;
+      &+&{
+        margin-left: 20px;
+      }
       &__title{
         margin-top: 32px;
         margin-bottom: 16px;
+        font-weight: 500;
       }
       &__text{
         margin-bottom: 125px;
         max-width: 468px;
         text-align: center;
+        font-size: 19px;
+        line-height: 28.5px;
+        font-weight: 300;
+        min-height: 85px;
       }
     }
   }

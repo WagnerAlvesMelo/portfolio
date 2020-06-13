@@ -19,7 +19,7 @@ export default {
 section {
   width: 100vw;
   max-height: 100vh;
-  min-height: 1080px;
+  min-height: 980px;
   display: block;
   padding: 0 140px !important;
 }

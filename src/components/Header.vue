@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="menu">
-      <p class="menu__logo">Meu portfólio</p>
+      <p class="menu__logo">Meu Portfólio</p>
       <ul class="menu__list">
         <li class="menu__list__item">
           <a>Home</a>

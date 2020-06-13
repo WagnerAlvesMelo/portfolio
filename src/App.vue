@@ -3,6 +3,8 @@
     <Header />
     <Intro />
     <About />
+    <WhatIDo />
+    <Skills/>
   </div>
 </template>
 
@@ -10,10 +12,12 @@
 import Intro from "./components/sections/Intro.vue";
 import Header from "./components/Header.vue";
 import About from "./components/sections/About.vue";
+import WhatIDo from "./components/sections/WhatIDo";
+import Skills from "./components/sections/Skills";
 
 export default {
   name: "App",
-  components: { Intro, Header, About }
+  components: { Intro, Header, About, WhatIDo, Skills }
 };
 </script>
 

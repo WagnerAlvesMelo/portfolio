@@ -32,17 +32,17 @@ export default {};
 
 <style lang="scss">
 header {
+  box-sizing: border-box;
   position: fixed;
   top: 35px;
-  width: 100%;
-  display: block;
+  width: 100vw;
+  padding: 0 140px;
 }
 
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 140px;
 
   &__logo {
     font-size: 24px;
@@ -56,6 +56,7 @@ header {
       @include font-corpo;
       text-transform: uppercase;
       letter-spacing: 2px;
+      text-align: left;
       & + & {
         margin-left: 63px;
       }

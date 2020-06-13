@@ -14,9 +14,9 @@ export default {
 <style lang="scss">
   .box{
     background: linear-gradient(135deg, rgba(132,53,140,.20) 0%, rgba(28,0,31,.20) 100%);
-    -webkit-box-shadow: 1px 2px 6px 0px rgba(255,255,255,.15);
-    -moz-box-shadow: 1px 2px 6px 0px rgba(255,255,255,.15);
-    box-shadow: 3px 4px 4px 0px rgba(255,255,255,.10);
+    -webkit-box-shadow: 2px 3px 6px 0px rgba(97,38,128,0.5);
+    -moz-box-shadow: 2px 3px 6px 0px rgba(97,38,128,0.5);
+    box-shadow: 2px 3px 6px 0px rgba(97,38,128,0.5);
     display: flex;
     flex-direction: column;
     align-items: center;

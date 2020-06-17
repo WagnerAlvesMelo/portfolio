@@ -24,12 +24,13 @@ export default {
 <style lang="scss">
 .about {
   &__title {
+    text-align: center;
     margin-top: 32px;
   }
 
   &__resume {
     @include font-corpo(1.5em);
-    width: 635px;
+    max-width: 635px;
     text-align: center;
     margin: 128px auto 0 auto;
     line-height: 36px;

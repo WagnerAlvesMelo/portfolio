@@ -2,7 +2,7 @@
   <Section classe="skills">
     <h3 class="title skills__title">Habilidades</h3>
     <div class="skills__carrousel">
-      <carousel :nav="false" :margin=20 :items=6>
+      <carousel :nav="false" :margin=20 :key="key" :responsive="{0:{items:1,nav:false},600:{items:5,nav:false}, 1366:{items:6,nav:false}}">
         <div class="skills__carrousel__item" v-for="item in items" :key="item.name">
           <Box class="skills__carrousel__item__box" v-html="item.content"/>
           <p class="skills__carrousel__item__title">{{item.name}}</p>
@@ -22,6 +22,7 @@ export default {
   components: { Section, Box, carousel  },
   data(){
     return{
+      key: 0,
       items:[
         {
           name: 'HTML5',
@@ -145,6 +146,25 @@ export default {
         }
       ]
     }
+  },
+  computed:{
+        screenSize(){
+          let screenWidth = screen.width
+          if(screenWidth > 1366){
+            return 6
+          }
+          else if(screenWidth > 960){
+            return 4
+          }
+          else{
+            return 3
+          }
+        }
+  },
+  watch: {
+        screenSize(newValue) {
+          alert('a')
+    }
   }
 }
 </script>
@@ -158,9 +178,15 @@ export default {
       align-items: center;
       &__box{
         width: 100%;
-        height: 250px;
+        padding: 60px 0; 
         display: flex;
         justify-content: center;
+        @include d(l){
+          padding: 20px 0; 
+  	      svg{
+            width: 7vw;
+          }
+        }
       }
       &__title{
         margin-top: 16px;

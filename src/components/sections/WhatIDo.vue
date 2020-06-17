@@ -5,9 +5,8 @@
       <Box class="whatido__items__box">
         <div>
           <ComputerIcon/>
-          <TabletIcon style="margin-left:46px"/>
         </div>
-        <h5 class="whatido__items__box__title">Construção de websites responsivos</h5>
+        <h5 class="whatido__items__box__title">Websites responsivos</h5>
         <p class="whatido__items__box__text"> Lorem Ipsum is simply dummy text of the all printing
           and typesetting industry. Lorem Ipsum has been the industry's</p>
       </Box>
@@ -35,36 +34,48 @@ import DesignIcon from '../icons/Design'
 import TabletIcon from '../icons/Tablet'
 
 export default {
-  components: { Section, Box, ComputerIcon, DesignIcon, TabletIcon }
+  components: { Section, Box, ComputerIcon, DesignIcon}
 }
 </script>
 
 <style lang='scss'>
   .whatido__items{
     margin-top: 224px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3,  1fr);
+    gap: 20px;
     &__box{
       display: flex;
       justify-content: center;
-      padding-top: 120px;
-      width: 100%;
-      &+&{
-        margin-left: 20px;
+      padding-top: 20%;
+      padding-bottom: 25%;
+      @include d(l){
+        padding-top: 15%;
+        padding-bottom: 15%;
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+      @include d(t){
+        padding-top: 100px;
       }
       &__title{
         margin-top: 32px;
-        margin-bottom: 16px;
-        font-weight: 500;
+        font-weight: 400;
+        @include d(l){
+          font-size: 16px;
+        }
       }
       &__text{
-        margin-bottom: 125px;
         max-width: 468px;
         text-align: center;
         font-size: 19px;
         line-height: 28.5px;
         font-weight: 300;
-        min-height: 85px;
+        margin-top: 16px;
+        @include d(l){
+          font-size: 16px;
+          line-height: 24px;
+        }
       }
     }
   }

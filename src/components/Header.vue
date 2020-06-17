@@ -37,6 +37,15 @@ header {
   top: 35px;
   width: 100vw;
   padding: 0 140px;
+  @include d(t){
+    padding: 0 70px !important;
+  }
+  @include d(m){
+    padding: 0 !important;
+  }
+  @include d(l){
+    padding: 0 100px !important;
+  }
 }
 
 .menu {
@@ -47,6 +56,9 @@ header {
   &__logo {
     font-size: 24px;
     color: white;
+    @include d(l){
+      font-size: 21px;
+    }
   }
 
   &__list {
@@ -57,8 +69,11 @@ header {
       text-transform: uppercase;
       letter-spacing: 2px;
       text-align: left;
+      @include d(l){
+        font-size: 16px;
+      }
       & + & {
-        margin-left: 63px;
+        margin-left: 30px;
       }
 
       & a {

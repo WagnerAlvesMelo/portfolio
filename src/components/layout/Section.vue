@@ -15,12 +15,21 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 section {
   width: 100vw;
   max-height: 100vh;
   min-height: 980px;
   display: block;
   padding: 0 140px !important;
+  @include d(t){
+    padding: 0 70px !important;
+  }
+  @include d(m){
+    padding: 0 !important;
+  }
+    @include d(l){
+    padding: 0 100px !important;
+  }
 }
 </style>

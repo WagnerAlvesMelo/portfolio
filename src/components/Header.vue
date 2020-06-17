@@ -1,24 +1,24 @@
 <template>
   <header>
     <nav class="menu">
-      <p class="menu__logo">Meu Portfólio</p>
+      <p v-scroll="handleScroll" class="menu__logo">Meu Portfólio</p>
       <ul class="menu__list">
-        <li class="menu__list__item">
+        <li v-scroll="handleScroll" class="menu__list__item">
           <a>Home</a>
         </li>
-        <li class="menu__list__item">
+        <li v-scroll="handleScroll" class="menu__list__item">
           <a>Sobre mim</a>
         </li>
-        <li class="menu__list__item">
+        <li v-scroll="handleScroll" class="menu__list__item">
           <a>O que faço</a>
         </li>
-        <li class="menu__list__item">
+        <li v-scroll="handleScroll" class="menu__list__item">
           <a>Habilidades</a>
         </li>
-        <li class="menu__list__item">
+        <li v-scroll="handleScroll" class="menu__list__item">
           <a>Projetos</a>
         </li>
-        <li class="menu__list__item">
+        <li v-scroll="handleScroll" class="menu__list__item">
           <a>Contato</a>
         </li>
       </ul>
@@ -27,7 +27,58 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    verifyScreenSize(){
+      if(window.scrollY > 960)
+        return true
+      else
+        return false
+    },
+    handleScroll(evt, el) {
+      if (this.verifyScreenSize()) {
+        el.setAttribute(
+        'style',
+        'opacity: 0.3;'
+      )}
+      else{
+        el.setAttribute(
+        'style',
+        'opacity: 1;'
+      )}
+    }
+
+  },
+
+  directives: {
+    scroll: {
+      inserted: function (el, binding, vnode) {
+        el.addEventListener('mouseover', ()=>{
+          if (vnode.context.verifyScreenSize()) {
+            el.setAttribute(
+            'style',
+            'opacity: 1;'
+          )}
+        })
+
+        el.addEventListener('mouseout', ()=>{
+          if (vnode.context.verifyScreenSize()) {
+            el.setAttribute(
+            'style',
+            'opacity: 0.3;'
+          )}
+        })
+
+        let f = function (evt) {
+          if (binding.value(evt, el)) {
+            window.removeEventListener('scroll', f)
+          }
+        }
+        window.addEventListener('scroll', f)
+      }
+    }
+  }
+};
 </script>
 
 <style lang="scss">
@@ -56,6 +107,7 @@ header {
   &__logo {
     font-size: 24px;
     color: white;
+    transition: 0.6s;
     @include d(l){
       font-size: 21px;
     }
@@ -69,13 +121,14 @@ header {
       text-transform: uppercase;
       letter-spacing: 2px;
       text-align: left;
+      transition: 0.6s;
       @include d(l){
         font-size: 16px;
       }
       & + & {
         margin-left: 30px;
       }
-
+      
       & a {
         cursor: pointer;
       }

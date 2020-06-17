@@ -146,25 +146,6 @@ export default {
         }
       ]
     }
-  },
-  computed:{
-        screenSize(){
-          let screenWidth = screen.width
-          if(screenWidth > 1366){
-            return 6
-          }
-          else if(screenWidth > 960){
-            return 4
-          }
-          else{
-            return 3
-          }
-        }
-  },
-  watch: {
-        screenSize(newValue) {
-          alert('a')
-    }
   }
 }
 </script>

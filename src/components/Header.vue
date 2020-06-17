@@ -35,38 +35,45 @@ export default {
       else
         return false
     },
-    handleScroll(evt, el) {
-      if (this.verifyScreenSize()) {
-        el.setAttribute(
-        'style',
-        'opacity: 0.3;'
-      )}
-      else{
-        el.setAttribute(
-        'style',
-        'opacity: 1;'
-      )}
-    }
 
+    changeOpacity(el,mode){
+      if(mode=="in"){
+        return ()=>{
+          el.setAttribute(
+            'style',
+            'opacity: 1;'
+          )
+        }
+      }else{
+        return ()=>{
+          el.setAttribute(
+            'style',
+            'opacity: 0.2;'
+          )
+        }
+      }
+    },
+
+    handleScroll(evt, el) {
+      if (this.verifyScreenSize())
+        this.changeOpacity(el,"out")()
+      else
+        this.changeOpacity(el,"in")()
+    }
   },
 
   directives: {
     scroll: {
       inserted: function (el, binding, vnode) {
-        el.addEventListener('mouseover', ()=>{
-          if (vnode.context.verifyScreenSize()) {
-            el.setAttribute(
-            'style',
-            'opacity: 1;'
-          )}
+
+         el.addEventListener('mouseout', ()=>{
+          if (vnode.context.verifyScreenSize())
+            vnode.context.changeOpacity(el,"out")()
         })
 
-        el.addEventListener('mouseout', ()=>{
-          if (vnode.context.verifyScreenSize()) {
-            el.setAttribute(
-            'style',
-            'opacity: 0.3;'
-          )}
+        el.addEventListener('mouseover', ()=>{
+          if (vnode.context.verifyScreenSize()) 
+            vnode.context.changeOpacity(el,"in")()
         })
 
         let f = function (evt) {

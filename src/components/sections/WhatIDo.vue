@@ -47,6 +47,7 @@ export default {
     @include d(m){
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
+      margin-top: 128px;
     }
     &__box{
       display: flex;
@@ -62,6 +63,10 @@ export default {
       @include d(t){
         padding-top: 100px;
       }
+      @include d(m){
+        padding-top: 5%;
+        padding-bottom: 5%;
+      }
       &__title{
         margin-top: 32px;
         font-weight: 400;
@@ -71,7 +76,9 @@ export default {
         @include d(m){
           grid-template-columns: 1fr;
           grid-template-rows: repeat(3, 1fr);
+          gap: 15px;
           margin-top: 32px;
+          font-size: 16px;
         }
       }
       &__text{

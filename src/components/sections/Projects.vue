@@ -49,6 +49,12 @@ export default {
 </script>
 
 <style lang="scss">
+  .projects__title{
+    margin-top: 310px !important;
+    @include d(m){
+      margin-top: 32px !important;
+    }
+  }
   .projects__items{
     margin-top: 224px;
     display: grid;

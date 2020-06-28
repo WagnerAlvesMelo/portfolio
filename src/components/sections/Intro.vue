@@ -31,6 +31,7 @@ export default {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     @include d(m){
+      width: calc(100% - 40px);
       text-align: center;
     }
 

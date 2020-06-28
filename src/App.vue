@@ -46,10 +46,7 @@ body {
   @include menu-title;
   @include d(m){
     font-size: 24px;
-    margin-top: 0;
-    margin-top: 32px;
   }
-  margin-top: 224px;
 }
 
 html,

@@ -108,7 +108,7 @@ header {
     padding: 0 70px !important;
   }
   @include d(m){
-    padding: 0 !important;
+    padding: 0 140px !important;
   }
   @include d(l){
     padding: 0 100px !important;
@@ -119,6 +119,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include d(m){
+    display: none;
+  }
 
   &__logo {
     font-size: 24px;
@@ -128,11 +131,13 @@ header {
     @include d(l){
       font-size: 21px;
     }
+    @include d(m){
+      text-align: center;
+    }
   }
 
   &__list {
     display: flex;
-
     &__item {
       @include font-corpo;
       text-transform: uppercase;

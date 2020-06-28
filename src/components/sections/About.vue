@@ -22,6 +22,7 @@ export default {
 .about {
   &__title {
     text-align: center;
+    margin-top: 32px;
   }
 
   &__resume {
@@ -32,6 +33,8 @@ export default {
     line-height: 36px;
     @include d(m){
       font-size: 15px;
+      line-height: 22.5px;
+      max-width: 400px;
     }
   }
 }

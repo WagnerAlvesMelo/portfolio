@@ -26,7 +26,7 @@ export default {
   data: function(){
     return {
       myRepos: null,
-      selectedReposId: [268168023, 249076839, 275088309, 263653496, 251094605]
+      selectedReposId: [268168023, 249076839, 275088309, 251094605]
     }
   },
   async mounted(){
@@ -50,15 +50,16 @@ export default {
 
 <style lang="scss">
   .projects__title{
-    margin-top: 310px !important;
+    margin-top: 310px;
     @include d(m){
-      margin-top: 32px !important;
+      margin-top: -20px;
     }
   }
   .projects__items{
     margin-top: 224px;
+    padding-bottom: 224px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 
     @include d(l){

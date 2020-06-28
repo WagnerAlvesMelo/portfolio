@@ -39,6 +39,12 @@ export default {
 </script>
 
 <style lang='scss'>
+  .whatido__title{
+    margin-top: 224px;
+    @include d(m){
+      margin-top: 0;
+    }
+  }
   .whatido__items{
     margin-top: 224px;
     display: grid;

@@ -30,11 +30,15 @@ export default {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    @include d(m){
+      text-align: center;
+    }
 
     &__apoio,
     &__funcao {
       font-size: 2em;
       font-weight: 300;
+      line-height: 48px;
     }
 
     &__apoio {
@@ -43,6 +47,7 @@ export default {
 
     &__nome {
       font-size: 4em;
+      line-height: 73px;
     }
 
     &__funcao {

@@ -196,12 +196,16 @@ export default {
 
 <style lang="scss">
   .skills__title{
+    margin-top: 224px;
     @include d(m){
-      margin-top: 128px !important;
+      margin-top: 128px;
     }
   }
   .skills__carrousel{
-    margin-top: 50%;
+    margin-top: 310px;
+    @include d(m){
+      margin-top: 244px;
+    }
     &__item{
       display: flex;
       flex-direction: column;

@@ -201,7 +201,7 @@ export default {
     }
   }
   .skills__carrousel{
-    margin-top: 310px;
+    margin-top: 50%;
     &__item{
       display: flex;
       flex-direction: column;

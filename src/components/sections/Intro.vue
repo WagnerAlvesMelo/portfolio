@@ -23,6 +23,7 @@ export default {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  height: 100vh;
 
   &__apresentacao {
     position: absolute;

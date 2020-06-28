@@ -44,6 +44,10 @@ export default {
     display: grid;
     grid-template-columns: repeat(3,  1fr);
     gap: 20px;
+    @include d(m){
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    }
     &__box{
       display: flex;
       justify-content: center;
@@ -64,6 +68,11 @@ export default {
         @include d(l){
           font-size: 16px;
         }
+        @include d(m){
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, 1fr);
+          margin-top: 32px;
+        }
       }
       &__text{
         max-width: 468px;
@@ -75,6 +84,11 @@ export default {
         @include d(l){
           font-size: 16px;
           line-height: 24px;
+        }
+        @include d(m){
+          font-size: 15px;
+          padding: 0 20px;
+          max-width: initial;
         }
       }
     }

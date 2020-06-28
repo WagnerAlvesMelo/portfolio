@@ -195,6 +195,16 @@ export default {
 </script>
 
 <style lang="scss">
+  .skills{
+    @include d(m){
+      min-height: 85vh;
+    } 
+  }
+  .skills__title{
+    @include d(m){
+      margin-top: 224px !important;
+    }
+  }
   .skills__carrousel{
     margin-top: 224px;
     &__item{

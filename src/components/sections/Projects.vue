@@ -64,6 +64,7 @@ export default {
     @include d(m){
       grid-template-columns: repeat(2, 1fr);
       gap: 15px;
+      margin-top: 224px;
     }
 
     &__item{
@@ -110,7 +111,7 @@ export default {
         }
         @include d(m){
           right: auto;
-          font-size: 19px;
+          font-size: 16px;
           padding:initial;
           width: 95%;
           padding: 5px 0px;

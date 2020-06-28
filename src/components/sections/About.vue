@@ -22,7 +22,6 @@ export default {
 .about {
   &__title {
     text-align: center;
-    margin-top: 32px;
   }
 
   &__resume {

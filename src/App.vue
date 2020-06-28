@@ -5,6 +5,7 @@
     <About />
     <WhatIDo />
     <Skills/>
+    <Projects/>
   </div>
 </template>
 
@@ -14,10 +15,11 @@ import Header from "./components/Header.vue";
 import About from "./components/sections/About.vue";
 import WhatIDo from "./components/sections/WhatIDo";
 import Skills from "./components/sections/Skills";
+import Projects from "./components/sections/Projects"
 
 export default {
   name: "App",
-  components: { Intro, Header, About, WhatIDo, Skills }
+  components: { Intro, Header, About, WhatIDo, Skills, Projects }
 };
 </script>
 
@@ -42,6 +44,9 @@ body {
 
 .title {
   @include menu-title;
+  @include d(m){
+    font-size: 24px;
+  }
 }
 
 html,

@@ -6,9 +6,9 @@
   >
     <div :class="reverse ? 'timeline__item__sqr--reverse' : '' " class="timeline__item__sqr"></div>
     <div :class="reverse ? 'timeline__item__cap--reverse' : '' " class="timeline__item__cap">
-      <p class="timeline__item__cap__title">Webdec Sistemas</p>
-      <p class="timeline__item__cap__function">Desenvolvedor Fullstack - Jr</p>
-      <p class="timeline__item__cap__date">2019-2020</p>
+      <p class="timeline__item__cap__title">{{desc}}</p>
+      <p class="timeline__item__cap__function">{{func}}</p>
+      <p class="timeline__item__cap__date">{{date}}</p>
     </div>
   </article>
 </template>
@@ -18,6 +18,15 @@ export default {
   props: {
     reverse: {
       type: Boolean
+    },
+    desc:{
+      type: String
+    },
+    func:{
+      type: String
+    },
+    date:{
+      type: String
     }
   }
 };
@@ -25,10 +34,12 @@ export default {
 
 <style lang="scss">
 .timeline__item {
+  max-height: 70px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  @include center(128px);
-
+  @include d(m){
+      font-size: 15px;
+  }
   &__sqr {
     grid-area: sqr;
     justify-self: center;
@@ -48,13 +59,21 @@ export default {
     @include font-corpo;
     line-height: 25px;
     margin-left: 8px;
+    @include d(m){
+      font-size: 14px;
+    }
     &__function {
       font-size: 0.875em;
+      @include d(m){
+        font-size: 12px;
+      } 
     }
-
     &__date {
       font-size: 0.75em;
       line-height: 20px;
+      @include d(m){
+        font-size: 10px;
+      }
     }
   }
 

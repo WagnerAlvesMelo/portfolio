@@ -18,7 +18,6 @@ export default {
 <style lang="scss">
 section {
   width: 100vw;
-  max-height: 100vh;
   min-height: 980px;
   display: block;
   padding: 0 140px !important;
@@ -26,7 +25,7 @@ section {
     padding: 0 70px !important;
   }
   @include d(m){
-    padding: 0 !important;
+    padding: 0 20px !important;
   }
     @include d(l){
     padding: 0 100px !important;

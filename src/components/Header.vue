@@ -1,26 +1,26 @@
 <template>
   <header>
     <nav class="menu">
-      <p v-scroll="handleScroll" class="menu__logo">Meu Portfólio</p>
+      <p v-scroll="handleScroll" @click="scrollToTop()" class="menu__logo">Meu Portfólio</p>
       <ul class="menu__list">
-        <li v-scroll="handleScroll" class="menu__list__item">
+        <li v-scroll="handleScroll" @click="scrollToTop()" class="menu__list__item">
           <a>Home</a>
         </li>
-        <li v-scroll="handleScroll" class="menu__list__item">
+        <li v-scroll="handleScroll" @click="menuScroll('about__title')" class="menu__list__item">
           <a>Sobre mim</a>
         </li>
-        <li v-scroll="handleScroll" class="menu__list__item">
+        <li v-scroll="handleScroll" @click="menuScroll('whatido__title')" class="menu__list__item">
           <a>O que faço</a>
         </li>
-        <li v-scroll="handleScroll" class="menu__list__item">
+        <li v-scroll="handleScroll" @click="menuScroll('skills__title')" class="menu__list__item">
           <a>Habilidades</a>
         </li>
-        <li v-scroll="handleScroll" class="menu__list__item">
+        <li v-scroll="handleScroll" @click="menuScroll('projects__title')" class="menu__list__item">
           <a>Projetos</a>
         </li>
-        <li v-scroll="handleScroll" class="menu__list__item">
+        <!-- <li v-scroll="handleScroll" @click="menuScroll('about__title')" class="menu__list__item">
           <a>Contato</a>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </header>
@@ -59,6 +59,15 @@ export default {
         this.changeOpacity(el,"out")()
       else
         this.changeOpacity(el,"in")()
+    },
+
+    menuScroll(titleClassName, paddingTop=32){
+      const elementYPosition = document.querySelector("."+titleClassName).offsetTop
+      window.scrollTo(0,elementYPosition-paddingTop)
+    },
+
+    scrollToTop(){
+      window.scrollTo(0,0)
     }
   },
 
@@ -114,7 +123,8 @@ header {
   &__logo {
     font-size: 24px;
     color: white;
-    transition: 0.6s;
+    transition: 0.2s;
+    cursor: pointer;
     @include d(l){
       font-size: 21px;
     }
@@ -128,7 +138,7 @@ header {
       text-transform: uppercase;
       letter-spacing: 2px;
       text-align: left;
-      transition: 0.6s;
+      transition: 0.2s;
       @include d(l){
         font-size: 16px;
       }
@@ -138,6 +148,11 @@ header {
       
       & a {
         cursor: pointer;
+      }
+
+      &:hover{
+        color: white;
+        opacity: 1;
       }
     }
   }

@@ -3,11 +3,8 @@
     <h3 class="title about__title">Sobre mim</h3>
     <p class="about__resume">
       Atuo como desenvolvedor de software e designer de interfaces.
-      Tenho experiência no desenvolvimento de
-      <br />sistemas e sites pessoais
-      para web baseados em
-      <br />conceitos de UX e utilizando as mais atuais
-      <br />tecnologias do mercado.
+      Tenho experiência no desenvolvimento de sistemas e sites pessoais
+      para web baseados em conceitos de UX e utilizando as mais atuais tecnologias do mercado.
     </p>
     <Timeline />
   </Section>
@@ -34,6 +31,9 @@ export default {
     text-align: center;
     margin: 128px auto 0 auto;
     line-height: 36px;
+    @include d(m){
+      font-size: 15px;
+    }
   }
 }
 </style>

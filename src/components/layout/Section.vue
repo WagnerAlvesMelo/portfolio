@@ -25,7 +25,7 @@ section {
   }
   @include d(m){
     padding: 0 20px !important;
-    min-height: 100vh;
+    min-height: 880px;
   }
     @include d(l){
     padding: 0 100px !important;

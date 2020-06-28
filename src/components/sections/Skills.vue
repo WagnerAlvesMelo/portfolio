@@ -197,7 +197,7 @@ export default {
 <style lang="scss">
   .skills{
     @include d(m){
-      min-height: 85vh;
+      min-height: 100vh;
     } 
   }
   .skills__title{

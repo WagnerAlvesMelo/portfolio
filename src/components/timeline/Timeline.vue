@@ -2,8 +2,7 @@
   <div class="timeline">
     <Event :reverse="true" class="timeline__event" desc="Webdec Sistemas" func="Desenvolvedor Fullstack - Jr" date="2019-2020" />
     <div class="timeline__divisor"/>
-    <Event :reverse="false" class="timeline__event" desc="Freelancer" func="Desenvolvedor Fullstack" date="2020 - atualmente"/>
-    <template />
+    <Event :reverse="false" class="timeline__event" desc="Redfox Soluções Digitais" func="Desenvolvedor Fullstack" date="2020 - atualmente"/>
   </div>
 </template>
 

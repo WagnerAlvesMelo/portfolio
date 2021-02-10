@@ -3,7 +3,7 @@
     <div class="intro__apresentacao">
       <p class="intro__apresentacao__apoio">Olá, eu sou</p>
       <p class="intro__apresentacao__nome">Wagner Alves</p>
-      <p class="intro__apresentacao__funcao">Desenvolvedor e UI Designer</p>
+      <p class="intro__apresentacao__funcao">Desenvolvedor Front-End</p>
     </div>
   </Section>
 </template>

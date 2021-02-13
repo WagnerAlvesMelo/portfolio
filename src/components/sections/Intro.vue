@@ -1,9 +1,9 @@
 <template>
   <Section classe="intro">
-    <div class="intro__apresentacao">
-      <p class="intro__apresentacao__apoio">Olá, eu sou</p>
-      <p class="intro__apresentacao__nome">Wagner Alves</p>
-      <p class="intro__apresentacao__funcao">Desenvolvedor Front-End</p>
+    <div data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" class="intro__apresentacao">
+      <p class="intro__apresentacao__apoio" data-aos="fade-up" data-aos-duration="500">Olá, eu sou</p>
+      <p class="intro__apresentacao__nome" data-aos="fade-up" data-aos-duration="750">Wagner Alves</p>
+      <p class="intro__apresentacao__funcao" data-aos="fade-up" data-aos-duration="1000">Desenvolvedor Front-End</p>
     </div>
   </Section>
 </template>

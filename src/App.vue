@@ -10,16 +10,26 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import Intro from "./components/sections/Intro.vue";
 import Header from "./components/Header.vue";
 import About from "./components/sections/About.vue";
 import WhatIDo from "./components/sections/WhatIDo";
 import Skills from "./components/sections/Skills";
 import Projects from "./components/sections/Projects"
+import AOS from 'aos'
+import VueTilt from 'vue-tilt.js'
+import 'aos/dist/aos.css'
 
 export default {
   name: "App",
-  components: { Intro, Header, About, WhatIDo, Skills, Projects }
+  components: { Intro, Header, About, WhatIDo, Skills, Projects },
+  created () {
+    AOS.init({
+      once: true
+    })
+    Vue.use(VueTilt)
+  }
 };
 </script>
 

@@ -1,8 +1,8 @@
 <template>
   <div class="timeline">
-    <Event :reverse="true" class="timeline__event" desc="Webdec Sistemas" func="Desenvolvedor Fullstack - Jr" date="2019-2020" />
-    <div class="timeline__divisor"/>
-    <Event :reverse="false" class="timeline__event" desc="Redfox Soluções Digitais" func="Desenvolvedor Fullstack" date="2020 - atualmente"/>
+    <Event data-aos="fade-right" :reverse="true" class="timeline__event" desc="Webdec Sistemas" func="Desenvolvedor Fullstack - Jr" date="2019-2020" />
+    <div data-aos="fade-up" class="timeline__divisor"/>
+    <Event data-aos="fade-left" :reverse="false" class="timeline__event" desc="Redfox Soluções Digitais" func="Desenvolvedor Fullstack" date="2020 - atualmente"/>
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
   .timeline{
     .timeline__event{
       &:first-of-type{
-        margin-top: 128px;
+        margin-top: 64px;
       }
     }
     .timeline__divisor{

@@ -1,7 +1,7 @@
 <template>
   <Section classe="about">
     <h3 class="title about__title">Sobre mim</h3>
-    <p class="about__resume">
+    <p class="about__resume" data-aos="zoom-out">
       Atuo como desenvolvedor de software front-end.
       Tenho experiência no desenvolvimento de sistemas e sites pessoais
       para web baseados em conceitos de UX e utilizando as mais atuais tecnologias do mercado.
@@ -22,14 +22,14 @@ export default {
 .about {
   &__title {
     text-align: center;
-    margin-top: 32px;
+    margin-top: 64px;
   }
 
   &__resume {
     @include font-corpo(1.5em);
     max-width: 635px;
     text-align: center;
-    margin: 128px auto 0 auto;
+    margin: 64px auto 0 auto;
     line-height: 36px;
     @include d(m){
       font-size: 15px;

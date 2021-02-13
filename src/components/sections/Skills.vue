@@ -3,7 +3,7 @@
     <h3 class="title skills__title">Habilidades</h3>
     <div class="skills__carrousel">
       <carousel :nav="false" :margin=20 :key="key" :responsive="{0:{items:2,nav:false},600:{items:5,nav:false}, 1366:{items:6,nav:false}}">
-        <div class="skills__carrousel__item" v-for="item in items" :key="item.name">
+        <div data-aos="zoom-in" :data-aos-duration="1000 + index * 300" class="skills__carrousel__item" v-for="(item, index) in items" :key="item.name">
           <Box class="skills__carrousel__item__box" v-html="item.content"/>
           <p class="skills__carrousel__item__title">{{item.name}}</p>
         </div>
@@ -85,15 +85,15 @@ export default {
 
 <style lang="scss">
   .skills__title{
-    margin-top: 224px;
+    margin-top: 128px;
     @include d(m){
       margin-top: 128px;
     }
   }
   .skills__carrousel{
-    margin-top: 310px;
+    margin-top: 128px;
     @include d(m){
-      margin-top: 244px;
+      margin-top: 128px;
     }
     &__item{
       display: flex;

@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div v-tilt="{speed: 200, perspective: 2000, max:10}" class="box">
     <slot></slot>
   </div>
 </template>

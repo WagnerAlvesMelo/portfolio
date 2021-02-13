@@ -26,6 +26,15 @@ export default {
   }
 }
 
+@keyframes animatedBackgroundMobile {
+  from {
+    background-position: 3% 0;
+  }
+  to {
+    background-position: left;
+  }
+}
+
 .intro {
   background: url("../../assets/img/bg1.png") no-repeat center center fixed;
   animation: animatedBackground 1s ease-out alternate;
@@ -36,6 +45,7 @@ export default {
   height: 100vh;
   @include d(m){
     background-position: left;
+    animation: animatedBackgroundMobile 1s ease-out alternate;
   }
 
   &__apresentacao {

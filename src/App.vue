@@ -5,7 +5,6 @@
     <About />
     <WhatIDo />
     <Skills/>
-    <Projects/>
   </div>
 </template>
 
@@ -23,7 +22,7 @@ import 'aos/dist/aos.css'
 
 export default {
   name: "App",
-  components: { Intro, Header, About, WhatIDo, Skills, Projects },
+  components: { Intro, Header, About, WhatIDo, Skills },
   created () {
     AOS.init({
       once: true

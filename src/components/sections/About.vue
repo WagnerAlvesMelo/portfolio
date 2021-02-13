@@ -3,7 +3,7 @@
     <h3 class="title about__title">Sobre mim</h3>
     <p class="about__resume" data-aos="zoom-out">
       Atuo como desenvolvedor de software front-end.
-      Tenho experiência no desenvolvimento de sistemas e sites pessoais
+      Tenho experiência no desenvolvimento de sistemas e sites institucionais
       para web baseados em conceitos de UX e utilizando as mais atuais tecnologias do mercado.
     </p>
     <Timeline />

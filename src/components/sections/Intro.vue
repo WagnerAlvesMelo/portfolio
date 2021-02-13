@@ -1,6 +1,6 @@
 <template>
   <Section classe="intro">
-    <div data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" class="intro__apresentacao">
+    <div class="intro__apresentacao">
       <p class="intro__apresentacao__apoio" data-aos="fade-up" data-aos-duration="500">Olá, eu sou</p>
       <p class="intro__apresentacao__nome" data-aos="fade-up" data-aos-duration="750">Wagner Alves</p>
       <p class="intro__apresentacao__funcao" data-aos="fade-up" data-aos-duration="1000">Desenvolvedor Front-End</p>
@@ -24,6 +24,9 @@ export default {
   -moz-background-size: cover;
   -o-background-size: cover;
   height: 100vh;
+  @include d(m){
+    background-position: left;
+  }
 
   &__apresentacao {
     position: absolute;
@@ -32,7 +35,6 @@ export default {
     transform: translateY(-50%);
     @include d(m){
       width: calc(100% - 40px);
-      text-align: center;
     }
 
     &__apoio,

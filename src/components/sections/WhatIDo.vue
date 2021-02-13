@@ -12,7 +12,7 @@
       </Box>
       <Box class="whatido__items__box" data-aos="flip-right">
         <DesignIcon/>
-        <h5 class="whatido__items__box__title">Desenvolvimento back-end</h5>
+        <h5 class="whatido__items__box__title">Sites personalizados do seu jeito</h5>
         <p class="whatido__items__box__text"> Lorem Ipsum is simply dummy text of the all printing
           and typesetting industry. Lorem Ipsum has been the industry's</p>
       </Box>
@@ -42,7 +42,7 @@ export default {
   .whatido__title{
     margin-top: 128px;
     @include d(m){
-      margin-top: 0;
+      margin-top: 128px;
     }
   }
   .whatido__items{
@@ -54,6 +54,10 @@ export default {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
       margin-top: 64px;
+      gap: 64px;
+    }
+    @include d(t){
+     gap: 32px;
     }
     &__box{
       display: flex;

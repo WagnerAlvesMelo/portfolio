@@ -87,13 +87,14 @@ export default {
   .skills__title{
     margin-top: 128px;
     @include d(m){
-      margin-top: 128px;
+      margin-top: 64px;
     }
   }
   .skills__carrousel{
     margin-top: 128px;
+    padding-bottom: 128px;
     @include d(m){
-      margin-top: 128px;
+      margin-top: 64px;
     }
     &__item{
       display: flex;

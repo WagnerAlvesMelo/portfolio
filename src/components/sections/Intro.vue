@@ -17,8 +17,18 @@ export default {
 </script>
 
 <style lang='scss'>
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: center;
+  }
+}
+
 .intro {
   background: url("../../assets/img/bg1.png") no-repeat center center fixed;
+  animation: animatedBackground 1s ease-out alternate;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
